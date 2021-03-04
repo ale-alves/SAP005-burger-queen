@@ -1,19 +1,5 @@
 
 
-/* .show-order {
-    border: 3px solid #f8cb00;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: auto;
-    margin: 0 0 1rem 0;
-} */
-
-
-
 .btn-finish-order {
     width: 200px;
     height: 46px;
@@ -49,15 +35,17 @@
 	margin: 0 auto;
 }
 
-.titulo-pokedex{
-	font-weight: 600;
-    font-size: 2em;
-    margin-bottom: 0.4em;
-    color: #908484;
-	text-align: center;
-	font-size: 54px;
-}
-
+/* .show-order {
+    border: 3px solid #f8cb00;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: 0 0 1rem 0;
+} */
 
 .card-orders {
     display: flex;
@@ -72,8 +60,3 @@
     margin: 0 0 1rem 0;
 }
 
-/* <div class="container-pokedex ">
-<h1 id="Pokedéx" class="titulo-pokedex">Pokedéx</h1>
-<!-- Lista de pokemons -->
-<div id="card" class="pokedex"></div>
-</div> */
