@@ -6,17 +6,17 @@ import Trash from "../../assets/trash.svg"
 
 
 const Menu = () => {
-  const [table, setTable] = useState ("")
+  const [table, setTable] = useState("")
   const user = localStorage.getItem("name");
   const tokenUser = localStorage.getItem("token");
   const [breakfast, setBreakfast] = useState([]);
   const [allDay, setAllDay] = useState([]);
   const [menus, setMenus] = useState(true);
   const [orderSummary, setOrderSummary] = useState([]);
-  const [makeOrder, setMakeOrder] = useState({"client": "", "table": table, "products": []});
+  const [makeOrder, setMakeOrder] = useState({ "client": "", "table": table, "products": [] });
   const [errorMessage, setErrorMessage] = useState("");
-  
- 
+
+
 
   useEffect(() => {
     fetch("https://lab-api-bq.herokuapp.com/products", {
@@ -44,26 +44,26 @@ const Menu = () => {
   }, [tokenUser]);
 
   function sumPriceTotal(array) {
-    return array.reduce((total, item) => total + (item.qtd*item.price), 0);
-};
+    return array.reduce((total, item) => total + (item.qtd * item.price), 0);
+  };
 
 
   return (
     <>
-    <div className="tables">
-          <select className="select-table" name="tables" id="tables" value={table} onChange={(e) => setTable(Number(e.target.value))} >
-            <option value="1">Mesa 01</option>
-            <option value="2">Mesa 02</option>
-            <option value="3">Mesa 03</option>
-            <option value="4">Mesa 04</option>
-            <option value="5">Mesa 05</option>
-            <option value="6">Mesa 05</option>
-            <option value="7">Mesa 07</option>
-            <option value="8">Mesa 08</option>
-            <option value="9">Mesa 09</option>
-            <option value="10">Mesa 10</option>
-          </select>
-          </div>
+      <div className="tables">
+        <select className="select-table" name="tables" id="tables" value={table} onChange={(e) => setTable(Number(e.target.value))} >
+          <option value="1">Mesa 01</option>
+          <option value="2">Mesa 02</option>
+          <option value="3">Mesa 03</option>
+          <option value="4">Mesa 04</option>
+          <option value="5">Mesa 05</option>
+          <option value="6">Mesa 05</option>
+          <option value="7">Mesa 07</option>
+          <option value="8">Mesa 08</option>
+          <option value="9">Mesa 09</option>
+          <option value="10">Mesa 10</option>
+        </select>
+      </div>
       <div className="main">
         <div className="main-left">
           <Logotipo />
@@ -90,8 +90,8 @@ const Menu = () => {
                       style: "currency",
                       currency: "BRL",
                     }).format(item.price)}`}</label>
-                      {/* <img className="item-product-image" src={item.image} /> */}
-                      
+                    {/* <img className="item-product-image" src={item.image} /> */}
+
                     <input
                       className="icon-button-add"
                       id={item.name}
@@ -127,180 +127,180 @@ const Menu = () => {
                 ))}
               </ul>
             ) : (
-              <ul className="list-menu">
-                {allDay.map((item, index) => (
-                  // {if(item.name === "Hambúrguer simples"){
+                <ul className="list-menu">
+                  {allDay.map((item, index) => (
+                    // {if(item.name === "Hambúrguer simples"){
 
-                  // }}
-                  <li key={index} className="list-menu-allDay">
-                    <label>{`${item.name} ${item.flavor} ${item.complement} ${Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    }).format(item.price)}`}</label>
-                    <input
-                      className="icon-button-add"
-                      id={item.name}
-                      type="image"
-                      alt="button-add"
-                      src={Add}
-                      name={item.id}
-                      onClick={(event) => {
-                        if (
-                          !orderSummary.some(
-                            (pedido) => pedido.name === allDay[index].name
-                          )
-                        ) {
-                          setOrderSummary([
-                            ...orderSummary,
-                            {
-                              id: allDay[index].id,
-                              name: allDay[index].name,
-                              price: allDay[index].price,
-                              qtd: 1,
-                            },
-                          ]);
-                        } else {
-                          orderSummary.map((item, i) => {
-                            if (item.name === allDay[index].name) {
-                              orderSummary[i].qtd++;
-                              setOrderSummary([...orderSummary]);
-                            }
-                          });
-                        }
-                      }}
-                    />
-                  </li>
-                ))}
-              </ul>
-            )}
+                    // }}
+                    <li key={index} className="list-menu-allDay">
+                      <label>{`${item.name} ${item.flavor} ${item.complement} ${Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      }).format(item.price)}`}</label>
+                      <input
+                        className="icon-button-add"
+                        id={item.name}
+                        type="image"
+                        alt="button-add"
+                        src={Add}
+                        name={item.id}
+                        onClick={(event) => {
+                          if (
+                            !orderSummary.some(
+                              (pedido) => pedido.name === allDay[index].name
+                            )
+                          ) {
+                            setOrderSummary([
+                              ...orderSummary,
+                              {
+                                id: allDay[index].id,
+                                name: allDay[index].name,
+                                price: allDay[index].price,
+                                qtd: 1,
+                              },
+                            ]);
+                          } else {
+                            orderSummary.map((item, i) => {
+                              if (item.name === allDay[index].name) {
+                                orderSummary[i].qtd++;
+                                setOrderSummary([...orderSummary]);
+                              }
+                            });
+                          }
+                        }}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              )}
           </div>
         </div>
 
         <section className="container-order">
-                <p className="title-order">Resumo do Pedido</p>
-                <p className="user-order">Atendente: {user}</p>
+          <p className="title-order">Resumo do Pedido</p>
+          <p className="user-order"><strong>Atendente:</strong> {user}</p>
+          <input className="client-order"
+            type="text"
+            placeholder="Digite nome do cliente"
+            onChange={(event) => {
+              setMakeOrder({ ...makeOrder, "client": event.target.value })
+            }}
+          />
 
-                <input className="client-order"
-                    type="text"
-                    placeholder="Nome do Cliente"
-                    onChange={(event) => {
-                        setMakeOrder({ ...makeOrder, "client": event.target.value })
-                    }}
-                />
-                {orderSummary !== [] &&
-                    <>
-                        <section className="title-list-order">
+        {orderSummary !== [] &&
+          <>
+            {/* <section className="title-list-order">
                             <label>Item</label>
                             <label>Valor</label>
                             <label>Quantidade</label>
-                        </section>
-                        <ul className="list-order">
-                            {orderSummary.map((item, index) => (
-                                <>
-                                    <li className="item-list-order" key={index}>
-                                        <label>
-                                            {typeof item.name === "string" ? item.name : item.name.map((item) => <><label>{item.name}</label> <label>{item.flavor}</label> <label>{item.complement}</label></>)}
-                                            {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price * item.qtd)}
-                                        </label>
-                                        <input
+                        </section> */}
+            <ul className="list-order">
+              {orderSummary.map((item, index) => (
+                <>
+                  <li className="item-list-order" key={index}>
+                    <label>
+                      {typeof item.name === "string" ? item.name : item.name.map((item) => <><label>{item.name}</label> <label>{item.flavor}</label> <label>{item.complement}</label></>)}
+                      {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price * item.qtd)}
+                    </label>
+                    <input
 
-                                            className="btn-quantity-order"
-                                            id="reduce-quantity"
-                                            type="button"
-                                            value="-"
-                                            onClick={() => {
-                                                if (item.qtd > 1 && item.name === orderSummary[index].name) {
-                                                    orderSummary[index].qtd--;
-                                                    setOrderSummary([...orderSummary]);
-                                                } else if (item.name === orderSummary[index].name && item.qtd === 1) {
-                                                    orderSummary.splice(index, 1);
-                                                    setOrderSummary([...orderSummary]);
-                                                }
-                                            }}
-                                        />
-                                        <label className="qnt"> {item.qtd} </label>
-                                        <input
-                                            className="btn-quantity-order"
-                                            id="increase-quantity"
-                                            type="button"
-                                            value="+"
-                                            onClick={() => {
-                                                if (item.name === orderSummary[index].name) {
-                                                    orderSummary[index].qtd++;
-                                                    setOrderSummary([...orderSummary]);
-                                                }
-                                            }}
-                                        />
-                                        <input
-                                            className="icon-button-delete"
-                                            id="delete-item"
-                                            type="image"
-                                            src={Trash}
-                                            alt="icon-trash"
-                                            onClick={() => {
-                                                orderSummary.splice(index, 1);
-                                                setOrderSummary([...orderSummary]);
-                                            }}
-                                            
-                                        />
-                                    </li>
-                                </>
-                            ))}
-                        </ul>
+                      className="btn-quantity-order"
+                      id="reduce-quantity"
+                      type="button"
+                      value="-"
+                      onClick={() => {
+                        if (item.qtd > 1 && item.name === orderSummary[index].name) {
+                          orderSummary[index].qtd--;
+                          setOrderSummary([...orderSummary]);
+                        } else if (item.name === orderSummary[index].name && item.qtd === 1) {
+                          orderSummary.splice(index, 1);
+                          setOrderSummary([...orderSummary]);
+                        }
+                      }}
+                    />
+                    <label className="qnt"> {item.qtd} </label>
+                    <input
+                      className="btn-quantity-order"
+                      id="increase-quantity"
+                      type="button"
+                      value="+"
+                      onClick={() => {
+                        if (item.name === orderSummary[index].name) {
+                          orderSummary[index].qtd++;
+                          setOrderSummary([...orderSummary]);
+                        }
+                      }}
+                    />
+                    <input
+                      className="icon-button-delete"
+                      id="delete-item"
+                      type="image"
+                      src={Trash}
+                      alt="icon-trash"
+                      onClick={() => {
+                        orderSummary.splice(index, 1);
+                        setOrderSummary([...orderSummary]);
+                      }}
 
-                        <p className="total-order">TOTAL: {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(sumPriceTotal(orderSummary))}</p>
-                        <section className="send-order">
-                            <input className="btn-send-order"
-                                type="button"
-                                value="Enviar Pedido"
-                                onClick={() => {
-                                    if (makeOrder.client !== "") {
-                                        const products = orderSummary.map(produto => {
-                                            return { "id": produto.id, "qtd": produto.qtd };
-                                        });
+                    />
+                  </li>
+                </>
+              ))}
+            </ul>
 
-                                        makeOrder.products = products;
-                                        makeOrder.table = table;
+            <p className="total-order">TOTAL: {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(sumPriceTotal(orderSummary))}</p>
+            <section className="send-order">
+              <input className="btn-send-order"
+                type="button"
+                value="Enviar Pedido"
+                onClick={() => {
+                  if (makeOrder.client !== "") {
+                    const products = orderSummary.map(produto => {
+                      return { "id": produto.id, "qtd": produto.qtd };
+                    });
 
-                                        const requestOptions = {
-                                            method: 'POST',
-                                            headers: {
-                                                'Content-Type': 'application/json',
-                                                'Authorization': `${tokenUser}`,
-                                            },
-                                            body: JSON.stringify(makeOrder),
-                                        };
+                    makeOrder.products = products;
+                    makeOrder.table = table;
 
-                                        fetch('https://lab-api-bq.herokuapp.com/orders', requestOptions)
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                if (data.id !== undefined) {
-                                                    setOrderSummary([]);
-                                                    document.querySelector(".client-order").value = "";
-                                                } else {
-                                                    setErrorMessage(`${data.message}`)
-                                                }
-                                            })
-                                    } else {
-                                        setErrorMessage("Preencha o nome do cliente!");
-                                    }
-                                }}
-                            />
+                    const requestOptions = {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `${tokenUser}`,
+                      },
+                      body: JSON.stringify(makeOrder),
+                    };
+
+                    fetch('https://lab-api-bq.herokuapp.com/orders', requestOptions)
+                      .then(response => response.json())
+                      .then(data => {
+                        if (data.id !== undefined) {
+                          setOrderSummary([]);
+                          document.querySelector(".client-order").value = "";
+                        } else {
+                          setErrorMessage(`${data.message}`)
+                        }
+                      })
+                  } else {
+                    setErrorMessage("Preencha o nome do cliente!");
+                  }
+                }}
+              />
 
 
-                            <input className="btn-clean-order"
-                                type="button"
-                                value="Limpar Pedido"
-                                onClick={() => {
-                                    setOrderSummary([]);
-                                }}
-                            />
-                        </section>
-                    </>
-                }
+              <input className="btn-clean-order"
+                type="button"
+                value="Limpar Pedido"
+                onClick={() => {
+                  setOrderSummary([]);
+                }}
+              />
             </section>
-            
-      </div>
+          </>
+        }
+            </section>
+
+    </div>
     </>
   );
 };

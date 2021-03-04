@@ -7,16 +7,16 @@
 }
 
 .select-Table {
-  width: 200px;;
+  width: 200px;
   height: 50px;
   position: absolute;
   right: 430px;
-  top: 700px;
+  top: 650px;
   border: none;
   border-radius: 20px;
   margin-right: 10px;
   font-size: 40px;
-  color: #F8CB00;
+  color: #f8cb00;
   background-color: #000;
 }
 
@@ -61,28 +61,43 @@ select:active {
 
 .container-order {
   position: absolute;
-  width: 400px;
-  height: 370px;
+  width: 450px;
+  height: 500px;
   left: 60px;
-  top: 800px;
+  top: 750px;
   border-radius: 10px;
   background: #fff;
-  font-size: 18px;
+  font-size: 30px;
+  padding-left: 10px;
 }
 
 .title-order {
   text-align: center;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
+  padding-bottom: 24px;
+  padding-top: 10px;
+}
+
+.user-order {
+  font-size: 32px;
   padding-bottom: 10px;
 }
 
 .order-list label {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .client-order {
-  font-size: 25px;
+  width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 10px;
+  background: #ffffff;
+  border: 2px solid #f8cb00;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .qnt {
@@ -99,6 +114,15 @@ select:active {
   font-size: 25px;
 }
 
+.title-list-order label {
+  padding-left: 20px;
+}
+
+.item-list-order {
+  list-style: none;
+  font-size: 30px;
+}
+
 .total {
   font-size: 25px;
   position: absolute;
@@ -106,38 +130,38 @@ select:active {
   padding-left: 10px;
 }
 
-.button-clean {
+.btn-clean-order {
   width: 180px;
   height: 40px;
   position: absolute;
-  left: 260px;
-  top: 320px;
-  font-size: 21px;
+  left: 210px;
+  top: 450px;
+  font-size: 22px;
   background: #000;
   color: #fff;
   border-radius: 50px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .btn-send-order {
-  width: 200px;
-  height: 46px;
+  width: 230px;
+  height: 70px;
   position: absolute;
-  left: 60px;
-  top: 250px;
+  left: 80px;
+  top: 530px;
   background: #f8cb00;
   border-radius: 50px;
   text-align: center;
   padding-top: 1px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .main-right {
-	display: flex;
-	position: absolute;
-	top: 150px;
-	right: 100px;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  right: 100px;
 }
 
 /* .item-main-right{
@@ -147,28 +171,29 @@ select:active {
 } */
 
 .breakfast {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: baseline;
-	list-style-type: none;
-  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  list-style-type: none;
 }
 
-.list-menu-breakfast, .list-menu-allDay {
-	background-color: #fff;
-	padding: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
-	font-size: 28px;
-	font-weight: bold;
-	position: relative;
+.list-menu-breakfast,
+.list-menu-allDay {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
   left: 290px;
   top: 40px;
 }
 
-.icon-button-add, .icon-button-delete {
+.icon-button-add,
+.icon-button-delete {
   width: 40px;
   height: 40px;
   margin-left: 10px;
