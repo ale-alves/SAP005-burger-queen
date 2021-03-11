@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import Add from "../../assets/plus.png";
 import Logotipo from "../../components/Logotipo/Logotipo";
-import Trash from "../../assets/trash.svg"
+import { MdDelete } from "react-icons/md";
 
 
 const Menu = () => {
@@ -355,18 +355,11 @@ const Menu = () => {
                           }
                         }}
                       />
-                      <input
-                        className="icon-button-delete"
-                        id="delete-item"
-                        type="image"
-                        src={Trash}
-                        alt="icon-trash"
+                      <MdDelete size={25}
                         onClick={() => {
                           orderSummary.splice(index, 1);
                           setOrderSummary([...orderSummary]);
-                        }}
-
-                      />
+                        }} />
                     </li>
                   </>
                 ))}
@@ -379,51 +372,51 @@ const Menu = () => {
                 }}
               />
               <p className="total-order"><strong>TOTAL:</strong> {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(sumPriceTotal(orderSummary))}</p>
-              
+
             </>
           }
         </section>
-        
+
         <section className="send-order">
-                <input className="btn-send-order"
-                  type="button"
-                  value="Enviar Pedido"
-                  onClick={() => {
-                    if (makeOrder.client !== "") {
-                      const products = orderSummary.map(product => {
-                        return { "id": product.id, "qtd": product.qtd };
-                      });
+          <input className="btn-send-order"
+            type="button"
+            value="Enviar Pedido"
+            onClick={() => {
+              if (makeOrder.client !== "") {
+                const products = orderSummary.map(product => {
+                  return { "id": product.id, "qtd": product.qtd };
+                });
 
-                      makeOrder.products = products;
-                      makeOrder.table = table;
-                      const requestOptions = {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json',
-                          'Authorization': `${tokenUser}`,
-                        },
-                        body: JSON.stringify(makeOrder),
-                      };
+                makeOrder.products = products;
+                makeOrder.table = table;
+                const requestOptions = {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `${tokenUser}`,
+                  },
+                  body: JSON.stringify(makeOrder),
+                };
 
-                      fetch('https://lab-api-bq.herokuapp.com/orders', requestOptions)
-                        .then(response => response.json())
-                        .then(data => {
-                          if (data.id !== undefined) {
-                            setOrderSummary([]);
-                            document.querySelector(".client-order").value = "";
-                          } else {
-                            setErrorMessage(`${data.message}`)
-                          }
-                        })
+                fetch('https://lab-api-bq.herokuapp.com/orders', requestOptions)
+                  .then(response => response.json())
+                  .then(data => {
+                    if (data.id !== undefined) {
+                      setOrderSummary([]);
+                      document.querySelector(".client-order").value = "";
                     } else {
-                      setErrorMessage(alert("Preencha o nome do cliente e escolha sua mesa!"));
+                      setErrorMessage(`${data.message}`)
                     }
-                  }}
-                />
+                  })
+              } else {
+                setErrorMessage(alert("Preencha o nome do cliente e escolha sua mesa!"));
+              }
+            }}
+          />
 
 
 
-              </section>
+        </section>
 
       </div>
     </>
