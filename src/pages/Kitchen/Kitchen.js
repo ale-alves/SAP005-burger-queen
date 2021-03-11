@@ -63,8 +63,8 @@ const Kitchen = () => {
         {order &&
           order.map(function (product, index) {
             return (
-              <div className="card-orders" key={index}>
-                <span className="header-card">
+              <div className="card-orders-kitchen" key={index}>
+                <span className="header-card-kitchen">
                   <div><strong>Mesa:</strong> {product.table} | <strong>Pedido:</strong> {product.id}</div>
                 </span>
                 <p className="main-list">
@@ -98,15 +98,7 @@ const Kitchen = () => {
             );
           })}
       </div>
-      <div className="container-icon-logout">
-            <img
-              className="item-icon-logout"
-              src={Logout}
-              alt="icon-logout"
-              onClick={handleSignOut}
-            />
-          </div>
-    </div>
+      </div>
     </>
   );
 };

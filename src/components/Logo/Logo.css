@@ -1,4 +1,6 @@
 .login-logo img {
     width: 380px;
     height: 380px;
+    position: relative;
+    bottom: 80px;
 }

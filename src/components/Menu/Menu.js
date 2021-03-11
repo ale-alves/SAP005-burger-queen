@@ -62,7 +62,6 @@ const Menu = () => {
       <>
         <div className="extras">
           <section className="burger">
-            <p className="title-burger">Hambúrguer</p>
             <section className="input-burger">
               {burgers.map(typeBurger => (
                 <>
@@ -76,14 +75,14 @@ const Menu = () => {
                       setSelectedBurger({ ...selectedBurger });
                     }}
                   />
-                  <label for={typeBurger.name}>
+                  <label className="typeBurger" for={typeBurger.name}>
                     {typeBurger.name}</label>
                 </>
               ))}
             </section>
           </section>
           <section className="additional">
-            <p className="title-additional">Adicionais R$1</p>
+            <p className="title-additional">Adicionais R$1,00</p>
             <section className="input-additional">
               {additional.map((typeAdditional, index) => (
                 <>
@@ -202,7 +201,8 @@ const Menu = () => {
               <ul className="breakfast">
                 {breakfast.map((item, index) => (
                   <li key={index} className="list-menu-breakfast">
-                    <label>{`${item.name} ${Intl.NumberFormat("pt-BR", {
+                    <label>{`${item.name}
+                     ${Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     }).format(item.price)}`}</label>
@@ -246,8 +246,8 @@ const Menu = () => {
                 {allDay.map((item, index) => (
 
                   <li key={index} className="list-menu-allDay">
-                    <label>{`${item.name} 
-                      ${Intl.NumberFormat("pt-BR", {
+                    <label>{`${item.name}
+                       ${Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     }).format(item.price)}`}</label>
@@ -318,9 +318,9 @@ const Menu = () => {
                       <label>
                         {typeof item.name === "string" ? item.name : item.name.map((item) =>
                           <>
-                            <label className="burger-title" >{item.name}</label>
-                            <label className="burger-flavor" >{item.flavor}</label>
-                            <label className="burger-complement" >{item.complement}</label>
+                            <label className="burger-title" >{item.name} </label>
+                            <label className="burger-flavor" >{item.flavor} </label>
+                            <label className="burger-complement" >{item.complement} </label>
                           </>)}
                         <label className="item-price">
                           {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price * item.qtd)}

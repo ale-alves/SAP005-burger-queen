@@ -16,11 +16,11 @@
 
 .btn-menu-breakfast,
 .btn-menu-allDay {
-  width: 250px;
-  height: 70px;
+  width: 240px;
+  height: 60px;
   position: absolute;
-  left: 110px;
-  font-size: 30px;
+  left:110px;
+  font-size: 25px;
   background: #f8cb00;
   border-radius: 50px;
   font-weight: bold;
@@ -28,44 +28,42 @@
 
 .btn-menu-allDay {
   position: absolute;
-  top: 580px;
+  top: 380px;
 }
 
 .btn-menu-breakfast {
   position: absolute;
-  top: 460px;
+  top: 280px;
 }
 
 .select-table {
-  width: 380px;
+  width: 300px;
   height: 50px;
   position: absolute;
-  left: 100px;
-  top: 900px;
+  left: 90px;
+  top: 500px;
   border: none;
-  border-radius: 20px;
-  margin-right: 10px;
-  font-size: 40px;
+  font-size: 30px;
   color: #F8CB00;
   background-color: #000;
 }
 
 .select-table
-option:hover,
-option:focus,
-option:active {
-  background-color: #f8cb00;
+select:hover,
+select:focus,
+select:active {
+  background-color: #000;
   transition: 0s;
-  font-size: 10px;
-  color: #000;
+  font-size: 20px;
+  color: #F8CB00;
 }
 
 .container-order {
   position: absolute;
-  width: 800px;
-  height: 1000px;
-  left: 100px;
-  top: 1200px;
+  width: 950px;
+  height: 500px;
+  left: 30px;
+  top: 700px;
   border-radius: 10px;
   background: #fff;
   font-size: 18px;
@@ -99,10 +97,16 @@ option:active {
   font-size: 32px;
 }
 
+.item-list-order svg {
+  width: 40px;
+  height: 40px;
+}
+
 .btn-quantity-order {
   font-size: 35px;
   width: 40px;
   height: 40px;
+  margin: 5px;
   background-color: #F8CB00;
   border: 2px solid #000;
 }
@@ -120,7 +124,8 @@ option:active {
 .btn-clean-order {
   width: 210px;
   height: 55px;
-  margin-left: 570px;
+  margin-top: 10px;
+  margin-left: 700px;
   font-size: 26px;
   background: #000;
   color: #fff;
@@ -133,7 +138,7 @@ option:active {
   height: 60px;
   position: absolute;
   left: 370px;
-  top: 2250px;
+  top: 1230px;
   background: #f8cb00;
   border-radius: 50px;
   text-align: center;
@@ -145,8 +150,8 @@ option:active {
 .main-right {
 	display: flex;
 	position: absolute;
-	top: 150px;
-	right: 100px;
+	top: 90px;
+	right: 400px;
 }
 
 .breakfast {
@@ -156,28 +161,52 @@ option:active {
 	justify-content: space-around;
 	align-items: baseline;
 	list-style-type: none;
-  
 }
-/* refatorando */
-.input-complements label{
-  padding-right: 50px;
-}
-
-.title-coffee {
-  color: #fff;
-}
-/* refatorando */
 
 .list-menu-breakfast, .list-menu-allDay {
 	background-color: #fff;
-	padding: 10px;
+	padding: 5px;
 	margin-top: 10px;
 	margin-right: 10px;
-	font-size: 28px;
+	font-size: 25px;
 	font-weight: bold;
 	position: relative;
   left: 290px;
   top: 40px;
+}
+
+.input-burger, .input-additional {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.input-burger input {
+  position: relative;
+  left: 5px;
+  width:20px;
+  height:15px;
+}
+
+.input-additional {
+  position: relative;
+  right: 70px;
+}
+
+.input-additional input{
+  position: relative;
+  left: 70px;
+  width:20px;
+  height:15px;
+}
+
+.title-additional{
+  font-size: 25px;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .icon-button-add, .icon-button-delete {
@@ -188,12 +217,13 @@ option:active {
 
 
 .button-send {
-  width: 190px;
-  height: 40px;
+  width: 150px;
+  height: 30px;
   background: #f8cb00;
   border-radius: 50px;
   text-align: center;
-  padding-top: 1px;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 25px;
+  margin-left: 230px;
+  margin-top: 10px;
 }

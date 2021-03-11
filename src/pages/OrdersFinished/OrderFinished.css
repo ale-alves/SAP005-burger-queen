@@ -17,7 +17,7 @@
 .card-orders {
     display: flex;
     flex-direction: column;
-	border: 3px solid #f8cb00;
+	border: 3px solid #2aa72a;
     background-color: #fff;
     border-radius: 0.5rem;
 	position: relative;
@@ -27,7 +27,7 @@
 }
 
 .header-card {
-    background-color: #f8cb00;
+    background-color: #2aa72a;
     padding: 20px;
     font-size: 20px;
     text-align: center;
@@ -38,17 +38,21 @@
     padding-bottom: 30px;
     text-align: center;
     font-size: 20px;
-
 }
 
-.infos {
-    padding-bottom: 10px;
+.order-table {
+  font-size: 25px; 
+}
+
+.finished {
+   font-size: 20px;
+   padding-bottom: 10px; 
 }
 
 .btn-finish-order{
     width: 150px;
     height: 40px;
-    background: #f8cb00;
+    background: #0d8320;
     border-radius: 50px;
     text-align: center;
     padding-top: 1px;

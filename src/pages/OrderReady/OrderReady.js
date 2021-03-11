@@ -53,7 +53,9 @@ const OrderReady = () => {
 
   return (
     <>
-      <div className="order-ready">
+  
+      <div className="order-ready"> 
+       <p className="title-orders">PEDIDOS PRONTOS</p>
         <div className="container-icon-return">
           <img
             className="icon-return"
@@ -68,9 +70,9 @@ const OrderReady = () => {
           {order &&
             order.map(function (product, index) {
               return (
-                <div className="card-orders" key={index}>
-                  <span className="header-card">
-                    <div>
+                <div className="card-order" key={index}>
+                  <span className="header-cards">
+                    <div className="order-table">
                       <strong>Mesa:</strong> {product.table} |{" "}
                       <strong>Pedido:</strong> {product.id}
                     </div>
@@ -90,7 +92,7 @@ const OrderReady = () => {
                         <strong>Data/Hora:</strong> {product.createdAt}
                       </p>
                     </div>
-                    <p>
+                    <p className="finished">
                       {product.Products.map(function (item) {
                         return (
                           <div key={item.id}>
