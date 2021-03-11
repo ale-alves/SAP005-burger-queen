@@ -2,7 +2,7 @@
 # LaBurger
 
 <div align="center">
-<img src="https://trello-attachments.s3.amazonaws.com/6025d7e79baba060fe9cc8cf/500x500/cb44633086192050bddfc77f5e209df6/_Logotipo-removebg-preview_%281%29.png" alt="Logo do restaurante"
+<img src="https://trello-attachments.s3.amazonaws.com/6025d7e79baba060fe9cc8cf/500x500/c57b0c0fb0b4aa2e51accf2b1c064604/LaBurger-removebg-preview.png" alt="Logo do restaurante"
 width="300"
 height="300">
 </div>
