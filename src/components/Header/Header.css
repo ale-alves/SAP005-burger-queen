@@ -16,12 +16,11 @@
   padding-top: 20px;
 }
 
-.welcome-header {
+.header-hall p {
   width: 273px;
   position: absolute;
-  left: 50px;
-  top: 40px;
-  font-size: 33px;
+  top: 45px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -38,34 +37,58 @@
   justify-content: space-around;
   align-items: baseline;
   position: absolute;
-  right: 150px;
 }
 
 .item-btn-myOrder,
-.item-btn-myOrder-finished {
-  height: 60px;
-  font-size: 30px;
+.item-btn-finished {
+  height: 45px;
+  font-size: 22px;
   font-weight: bold;
   background: #f8cb00;
   border-radius: 50px;
 }
 
 .item-btn-myOrder {
-  width: 260px;
+  width: 200px;
+  position: absolute;
+  right: 270px;
 }
 
-.item-btn-myOrder-finished {
-  width: 310px;
+.item-btn-finished {
+  width: 250px;
   position: absolute;
-  left: 270px;
-  bottom: 0px;
+  right: 5px;
+  bottom: 11px;
 }
 
 .item-icon-logout {
-  position: absolute;
-  left: 587px;
-  bottom: 3px;
-  width: 65px;
-  height: 65px;
-  margin-left: 10px;
+  width: 55px;
+  height: 55px;
+  position: relative;
+  left: 120px;
+  bottom: 10px;
+
+  
+  /* margin-left: 10px; */
 }
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form-header {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.form-header p {
+  position: absolute;
+  right: 500px;
+
+
+} */

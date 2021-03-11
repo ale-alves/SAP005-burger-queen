@@ -1,8 +1,7 @@
 .logotipo-lb img {
     width: 200px;
     height: 200px;
-    position: absolute;
-    left: 130px;
-    top: 200px;
-
+    position: relative;
+    right: 130px;
+    bottom: 30px;
 }

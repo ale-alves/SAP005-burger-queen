@@ -1,6 +1,6 @@
 .hall-page {
-    height: 2400px;
-    width: 1024px;
+    min-height: 100%;
+    width: 100%;
     background-color: pink;
     font-family: 'Roboto', sans-serif;
 }
