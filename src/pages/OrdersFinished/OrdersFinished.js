@@ -53,70 +53,62 @@ const OrdersFinished = () => {
 
   return (
     <>
-      <div className="container-icon-return">
-        <img
-          className="icon-return"
-          src={Return}
-          alt="icon-return"
-          onClick={() => {
-            routerOrderBack();
-          }}
-        />
-      </div>
       <div className="order-ready">
-      <p className="title-page"> PEDIDOS FINALIZADOS</p>
+        <div className="container-icon-return">
+          <img
+            className="icon-return"
+            src={Return}
+            alt="icon-return"
+            onClick={() => {
+              routerOrderBack();
+            }}
+          />
+        </div>
+        <p className="title-page"> PEDIDOS FINALIZADOS</p>
         <div className="show-ready">
           {order &&
-
-            order.map
-              (function (product, index) {
-                return (
-                  <div className="card-orders-finished" key={index}>
-                    <span className="header-card-finished">
-                      <div>
-                        <strong>Mesa:</strong> {product.table} |{" "}
-                        <strong>Pedido:</strong> {product.id}
-                      </div>
-                    </span>
-                    <span>
-                      <div className="infos">
-                        <p>
-                          <strong>Atendente:</strong> {product.user_id}
-                        </p>
-                        <p>
-                          <strong>Cliente:</strong> {product.client_name}
-                        </p>
-                        <p>
-                          <strong>Status:</strong> {product.status}
-                        </p>
-                        <p>
-                          <strong>Data/Hora:</strong> {product.createdAt}
-                        </p>
-                      </div>
-                      <p className="main-list">
-                        {
-                          product.Products.map
-                            (function (item) {
-                              return (
-                                <div key={
-                                  item.id
-                                }>
-                                  <p>Quant: {item.qtd}</p>
-                                  <p>Item: {
-                                    item.name
-                                  } </p>
-                                  <p>Sabor: {item.flavor}</p>
-                                  <p>Complemento: {item.complement}</p>
-                                </div>
-                              );
-                            })}
+            order.map(function (product, index) {
+              return (
+                <div className="card-orders-finished" key={index}>
+                  <span className="header-card-finished">
+                    <div>
+                      <strong>Mesa:</strong> {product.table} |{" "}
+                      <strong>Pedido:</strong> {product.id}
+                    </div>
+                  </span>
+                  <span>
+                    <div className="infos">
+                      <p>
+                        <strong>Atendente:</strong> {product.user_id}
                       </p>
-                    </span>
-                  </div>
-                );
-              })}
-          </div>
+                      <p>
+                        <strong>Cliente:</strong> {product.client_name}
+                      </p>
+                      <p>
+                        <strong>Status:</strong> {product.status}
+                      </p>
+                      <p>
+                        <strong>Data/Hora:</strong> {product.createdAt}
+                      </p>
+                    </div>
+                    <p className="main-list">
+                      {product.Products.map(function (item) {
+                        return (
+                          <div key={item.id}>
+                            <p>Quant: {item.qtd}</p>
+                            <p>Item: {item.name} </p>
+                            <p>Sabor: {item.flavor}</p>
+                            <p>Complemento: {item.complement}</p>
+                          </div>
+                        );
+                      })}
+                    </p>
+                  </span>
+                </div>
+              );
+            })}
         </div>
+      </div>
     </>
   );
 };

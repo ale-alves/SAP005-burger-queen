@@ -71,7 +71,7 @@ const OrderReady = () => {
             order.map(function (product, index) {
               return (
                 <div className="card-order" key={index}>
-                  <span className="header-cards">
+                  <span className="header-card">
                     <div className="order-table">
                       <strong>Mesa:</strong> {product.table} |{" "}
                       <strong>Pedido:</strong> {product.id}

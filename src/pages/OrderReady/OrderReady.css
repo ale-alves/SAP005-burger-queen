@@ -21,7 +21,7 @@
 	margin: 0 auto;
 }
 
-.card-orders {
+.card-order {
 	display: flex;
     flex-direction: column;
     border: 3px solid #f8cb00;
@@ -40,12 +40,13 @@
     text-align: center;
 }
 
-.main-list {
+.main-list{
     padding-top: 10px;
     padding-bottom: 30px;
     text-align: left;
     font-size: 18px;
-}
+}    
+
 
 .infos {
   padding-bottom: 20x;
@@ -71,6 +72,3 @@
   padding-top: 15px;
 }
 
-.container-icon-return {
-  background-color: #000;
-}
