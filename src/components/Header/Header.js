@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import "./Header.css";
 import { useHistory } from "react-router-dom";
 import Logout from "../../assets/logout.png";
@@ -24,9 +24,9 @@ function Header() {
   return (
     <header>
       <div className="header-hall">
-        <p>Bem vindo, {user}!!</p>
+        <p id="welcome-header">Bem vindo, {user}!!</p>
         <div className="form-header">
-          <div className="container-btn-order">
+          <div className="container-btn-myOrder">
             <button
               className="item-btn-myOrder"
               type="submit"
@@ -37,8 +37,10 @@ function Header() {
               {" "}
               Pedidos Prontos
             </button>
+          </div>
+          <div className="container-btn-myOrder-finished">
             <button
-              className="item-btn-finished"
+              className="item-btn-myOrder-finished"
               type="submit"
               onClick={() => {
                 routerOrderFinished();
@@ -47,14 +49,15 @@ function Header() {
               {" "}
               Pedidos Finalizados
             </button>
-            <div className="container-icon-logout">
-              <img
-                className="item-icon-logout"
-                src={Logout}
-                alt="icon-logout"
-                onClick={handleSignOut}
-              />
-            </div>
+          </div>
+
+          <div className="container-icon-logout">
+            <img
+              className="item-icon-logout"
+              src={Logout}
+              alt="icon-logout"
+              onClick={handleSignOut}
+            />
           </div>
         </div>
       </div>

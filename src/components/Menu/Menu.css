@@ -1,0 +1,169 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.btn-show-menus {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  position: absolute;
+  left: 60px;
+  top: 280px;
+}
+
+.btn-breakfast,
+.btn-allDay {
+  width: 200px;
+  height: 50px;
+  font-size: 23px;
+  background: #f8cb00;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.btn-allDay {
+  position: absolute;
+  top: 10px;
+}
+
+.btn-breakfast {
+  position: absolute;
+  bottom: 10px;
+}
+
+#summary {
+  width: 300px;
+  max-height: 600px;
+  background-color: #fff;
+  position: absolute;
+  left: 30px;
+  top: 500px;
+  border: 2px solid #f8cb00;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.title-summary {
+  font-size: 23px;
+  font-weight: bold;
+  background-color: #f8cb00;
+  text-align: center;
+  padding: 5px;
+}
+
+.title-total {
+  font-size: 22px;
+}
+
+#btn-sendKitchen {
+  width: 170px;
+  height: 45px;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: 22px;
+  background: #f8cb00;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.main-right h1 {
+  font-size: 25px;
+  color: #fff;
+  padding: 10px;
+  margin-left: 190px;
+  margin-top: 20px;
+}
+
+.container-breakfast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 5px;
+  margin-left: 190px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.item-btn, .item-btn-burgers {
+  width: 130px;
+  height: 43px;
+  font-size: 21px;
+  background: #f8cb00;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.itens-burgers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 430px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 190px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.itens-burgers-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+ .title-flavor{
+   margin-top: 15px;
+ }
+
+.itens-burgers label {
+  padding-right: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.title-complement {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.itens-sides,
+.itens-drinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 470px;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 190px;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.itens-drinks {
+  margin-bottom: 20px;
+}
+
+.item-btn-burgers {
+  margin-left: 280px;
+}

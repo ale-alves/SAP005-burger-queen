@@ -53,6 +53,7 @@ const OrderReady = () => {
 
   return (
     <>
+    
       <div className="order-ready">
         <div className="container-icon-return">
           <img
@@ -64,6 +65,7 @@ const OrderReady = () => {
             }}
           />
         </div>
+        <p className="title-page"> PEDIDOS PRONTOS</p>
         <div className="show-ready">
           {order &&
             order.map(function (product, index) {
@@ -90,7 +92,7 @@ const OrderReady = () => {
                         <strong>Data/Hora:</strong> {product.createdAt}
                       </p>
                     </div>
-                    <p>
+                    <p className="main-list">
                       {product.Products.map(function (item) {
                         return (
                           <div key={item.id}>
@@ -102,7 +104,7 @@ const OrderReady = () => {
                         );
                       })}
                       <button
-                        className="btn-reader-order"
+                        className="btn-order-delivered"
                         type="submit"
                         onClick={() => {
                           finishedOrders(product.id);

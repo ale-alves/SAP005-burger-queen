@@ -68,14 +68,15 @@ const OrdersFinished = () => {
         />
       </div>
       <div className="order-ready">
+      <p className="title-page"> PEDIDOS FINALIZADOS</p>
         <div className="show-ready">
           {order &&
 
             order.map
               (function (product, index) {
                 return (
-                  <div className="card-orders" key={index}>
-                    <span className="header-card">
+                  <div className="card-orders-finished" key={index}>
+                    <span className="header-card-finished">
                       <div>
                         <strong>Mesa:</strong> {product.table} |{" "}
                         <strong>Pedido:</strong> {
@@ -98,7 +99,7 @@ const OrdersFinished = () => {
                           <strong>Data/Hora:</strong> {product.createdAt}
                         </p>
                       </div>
-                      <p>
+                      <p className="main-list">
                         {
                           product.Products.map
                             (function (item) {

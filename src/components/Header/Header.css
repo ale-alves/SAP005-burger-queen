@@ -16,12 +16,12 @@
   padding-top: 20px;
 }
 
-.header-hall p {
+#welcome-header {
   width: 273px;
   position: absolute;
-  top: 45px;
-  font-size: 25px;
-  font-style: normal;
+  left: 30px;
+  top: 40px; 
+  font-size: 27px;
   font-weight: 400;
   text-align: center;
   color: #fff;
@@ -36,59 +36,34 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: baseline;
-  position: absolute;
 }
 
 .item-btn-myOrder,
-.item-btn-finished {
-  height: 45px;
-  font-size: 22px;
+.item-btn-myOrder-finished {
+  height: 50px;
+  font-size: 24px;
   font-weight: bold;
   background: #f8cb00;
   border-radius: 50px;
 }
 
 .item-btn-myOrder {
-  width: 200px;
+  width: 210px;
   position: absolute;
   right: 270px;
 }
 
-.item-btn-finished {
+.item-btn-myOrder-finished {
   width: 250px;
   position: absolute;
-  right: 5px;
-  bottom: 11px;
+  right: 0px;
+  top: 0px;
 }
 
 .item-icon-logout {
-  width: 55px;
-  height: 55px;
-  position: relative;
-  left: 120px;
-  bottom: 10px;
-
-  
-  /* margin-left: 10px; */
-}
-
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.form-header {
-  display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: baseline;
-}
-
-.form-header p {
   position: absolute;
-  right: 500px;
-
-
-} */
+  left: 60px;
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+}
