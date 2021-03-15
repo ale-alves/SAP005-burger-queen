@@ -1,7 +1,7 @@
-.order-ready{
-    width: 100%;
-    height: 100%;
-    background: #000;
+.order-ready {
+  width: 100%;
+  height: 100%;
+  background: #000;
 }
 
 .title-page {
@@ -40,16 +40,15 @@
     text-align: center;
 }
 
-.main-list{
+.main-list {
     padding-top: 10px;
     padding-bottom: 30px;
     text-align: left;
     font-size: 18px;
-
 }
 
 .infos {
-    padding-bottom: 10px;
+  padding-bottom: 20x;
 }
 
 .btn-order-delivered {
@@ -66,12 +65,12 @@
 }
 
 .icon-return {
-    width: 60px;
-    height: 60px;
-    margin-left: 10px;
-    padding-top: 15px;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  padding-top: 15px;
 }
 
 .container-icon-return {
-    background-color: #000;
+  background-color: #000;
 }

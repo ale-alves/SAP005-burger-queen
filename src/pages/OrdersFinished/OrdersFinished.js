@@ -21,9 +21,7 @@ const OrdersFinished = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        const order = json.filter(
-          (item) => item.status === "Pedido Entregue"
-        );
+        const order = json.filter((item) => item.status === "Pedido Entregue");
         console.log(json);
         setOrder(order);
       });
@@ -47,9 +45,7 @@ const OrdersFinished = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        const changeOrder = order.filter((item) =>
-          item.id
-          !== productId);
+        const changeOrder = order.filter((item) => item.id !== productId);
 
         setOrder(changeOrder);
       });
@@ -79,9 +75,7 @@ const OrdersFinished = () => {
                     <span className="header-card-finished">
                       <div>
                         <strong>Mesa:</strong> {product.table} |{" "}
-                        <strong>Pedido:</strong> {
-                          product.id
-                        }
+                        <strong>Pedido:</strong> {product.id}
                       </div>
                     </span>
                     <span>
@@ -121,11 +115,10 @@ const OrdersFinished = () => {
                   </div>
                 );
               })}
+          </div>
         </div>
-      </div>
     </>
   );
 };
 
 export default OrdersFinished;
-

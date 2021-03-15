@@ -1,6 +1,6 @@
 .main-kitchen {
-    height: 2200px;
-    width: 1024px;
+    min-height: 1000px;
+    width: 100%;
     background-color: #000;
     font-family: 'Roboto', sans-serif;
 }
@@ -15,7 +15,7 @@
 	margin: 0 auto;
 }
 
-.card-orders {
+.card-orders-kitchen {
     display: flex;
     flex-direction: column;
 	border: 3px solid #f8cb00;
@@ -27,7 +27,7 @@
 	margin: 1em;
 }
 
-.header-card {
+.header-card-kitchen {
     background-color: #f8cb00;
     padding: 20px;
     font-size: 20px;
@@ -38,11 +38,12 @@
     padding-top: 10px;
     padding-bottom: 30px;
     text-align: center;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .infos {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    font-size: 20px;
 }
 
 .btn-reader-order {
@@ -53,7 +54,7 @@
     text-align: center;
     padding-top: 1px;
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 100px;
     font-weight: bold;
     font-size: 18px;
 }
