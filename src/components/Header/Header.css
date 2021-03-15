@@ -16,12 +16,12 @@
   padding-top: 20px;
 }
 
-.welcome-header {
+#welcome-header {
   width: 273px;
   position: absolute;
-  left: 50px;
-  font-size: 33px;
-  font-style: normal;
+  left: 30px;
+  top: 40px; 
+  font-size: 27px;
   font-weight: 400;
   text-align: center;
   color: #fff;
@@ -41,20 +41,20 @@
 .item-btn-myOrder,
 .item-btn-myOrder-finished {
   height: 50px;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   background: #f8cb00;
   border-radius: 50px;
 }
 
 .item-btn-myOrder {
-  width: 230px;
+  width: 210px;
   position: absolute;
-  right: 290px;
+  right: 270px;
 }
 
 .item-btn-myOrder-finished {
-  width: 280px;
+  width: 250px;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -63,7 +63,6 @@
 .item-icon-logout {
   position: absolute;
   left: 60px;
-  top: 1px;
   width: 65px;
   height: 65px;
   margin-left: 10px;

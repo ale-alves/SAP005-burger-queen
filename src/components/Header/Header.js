@@ -24,7 +24,7 @@ function Header() {
   return (
     <header>
       <div className="header-hall">
-        <p className="welcome-header">Bem vindo, {user}!!</p>
+        <p id="welcome-header">Bem vindo, {user}!!</p>
         <div className="form-header">
           <div className="container-btn-myOrder">
             <button

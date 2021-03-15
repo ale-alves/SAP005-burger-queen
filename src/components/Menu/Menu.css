@@ -6,224 +6,164 @@
   align-items: baseline;
 }
 
-.btn-menu {
+.btn-show-menus {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: baseline;
-}
-
-.btn-menu-breakfast,
-.btn-menu-allDay {
-  width: 240px;
-  height: 60px;
   position: absolute;
-  left:110px;
-  font-size: 25px;
-  background: #f8cb00;
-  border-radius: 50px;
-  font-weight: bold;
-}
-
-.btn-menu-allDay {
-  position: absolute;
-  top: 380px;
-}
-
-.btn-menu-breakfast {
-  position: absolute;
+  left: 60px;
   top: 280px;
 }
 
-.select-table {
-  width: 300px;
+.btn-breakfast,
+.btn-allDay {
+  width: 200px;
   height: 50px;
-  position: absolute;
-  left: 90px;
-  top: 500px;
-  border: none;
-  font-size: 30px;
-  color: #F8CB00;
-  background-color: #000;
+  font-size: 23px;
+  background: #f8cb00;
+  border-radius: 50px;
+  font-weight: bold;
 }
 
-.select-table
-select:hover,
-select:focus,
-select:active {
-  background-color: #000;
-  transition: 0s;
-  font-size: 20px;
-  color: #F8CB00;
+.btn-allDay {
+  position: absolute;
+  top: 10px;
 }
 
-.container-order {
+.btn-breakfast {
   position: absolute;
-  width: 950px;
-  height: 500px;
+  bottom: 10px;
+}
+
+#summary {
+  width: 300px;
+  max-height: 600px;
+  background-color: #fff;
+  position: absolute;
   left: 30px;
-  top: 700px;
+  top: 500px;
+  border: 2px solid #f8cb00;
   border-radius: 10px;
-  background: #fff;
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px;
 }
 
-.title-order {
-  text-align: center;
+.title-summary {
+  font-size: 23px;
   font-weight: bold;
-  font-size: 35px;
-  padding-bottom: 10px;
-  padding-top: 15px;
+  background-color: #f8cb00;
+  text-align: center;
+  padding: 5px;
 }
 
-.user-order {
-  font-size: 35px;
-  padding-bottom: 7px;
+.title-total {
+  font-size: 22px;
 }
 
-.client-order {
-  font-size: 35px;
-  border: 3px solid #F8CB00;
-  padding-bottom: 7px;
-}
-
-.total-order {
-  font-size: 35px;
-}
-
-.item-list-order label {
-  font-size: 32px;
-}
-
-.item-list-order svg {
-  width: 40px;
-  height: 40px;
-}
-
-.btn-quantity-order {
-  font-size: 35px;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  background-color: #F8CB00;
-  border: 2px solid #000;
-}
-
-.button-qtd {
-  height: 30px;
-  width: 40px;
-  font-size: 18px;
-}
-
-.itens {
-  font-size: 25px;
-}
-
-.btn-clean-order {
-  width: 210px;
-  height: 55px;
-  margin-top: 10px;
-  margin-left: 700px;
-  font-size: 26px;
-  background: #000;
-  color: #fff;
-  border-radius: 50px;
-  font-weight: bold;  
-}
-
-.btn-send-order {
-  width: 260px;
-  height: 60px;
-  position: absolute;
-  left: 370px;
-  top: 1230px;
+#btn-sendKitchen {
+  width: 170px;
+  height: 45px;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: 22px;
   background: #f8cb00;
   border-radius: 50px;
-  text-align: center;
-  padding-top: 1px;
   font-weight: bold;
-  font-size: 35px;
 }
 
-.main-right {
-	display: flex;
-	position: absolute;
-	top: 90px;
-	right: 400px;
-}
-
-.breakfast {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: baseline;
-	list-style-type: none;
-}
-
-.list-menu-breakfast, .list-menu-allDay {
-	background-color: #fff;
-	padding: 5px;
-	margin-top: 10px;
-	margin-right: 10px;
-	font-size: 25px;
-	font-weight: bold;
-	position: relative;
-  left: 290px;
-  top: 40px;
-}
-
-.input-burger, .input-additional {
-  display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: baseline;
-}
-
-.input-burger input {
-  position: relative;
-  left: 5px;
-  width:20px;
-  height:15px;
-}
-
-.input-additional {
-  position: relative;
-  right: 70px;
-}
-
-.input-additional input{
-  position: relative;
-  left: 70px;
-  width:20px;
-  height:15px;
-}
-
-.title-additional{
+.main-right h1 {
   font-size: 25px;
-  padding-top: 5px;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  color: #fff;
+  padding: 10px;
+  margin-left: 190px;
+  margin-top: 20px;
 }
 
-.icon-button-add, .icon-button-delete {
-  width: 40px;
-  height: 40px;
+.container-breakfast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 5px;
+  margin-left: 190px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.item-btn, .item-btn-burgers {
+  width: 130px;
+  height: 43px;
+  font-size: 21px;
+  background: #f8cb00;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
   margin-left: 10px;
 }
 
+.itens-burgers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 430px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 190px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+}
 
-.button-send {
-  width: 150px;
-  height: 30px;
-  background: #f8cb00;
-  border-radius: 50px;
-  text-align: center;
-  font-weight: bold;
+.itens-burgers-title {
   font-size: 25px;
-  margin-left: 230px;
-  margin-top: 10px;
+  font-weight: bold;
+}
+
+ .title-flavor{
+   margin-top: 15px;
+ }
+
+.itens-burgers label {
+  padding-right: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.title-complement {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.itens-sides,
+.itens-drinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 470px;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 190px;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.itens-drinks {
+  margin-bottom: 20px;
+}
+
+.item-btn-burgers {
+  margin-left: 280px;
 }

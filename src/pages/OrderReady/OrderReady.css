@@ -4,74 +4,65 @@
   background: #000;
 }
 
-.title-orders {
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 35px;
-  padding-bottom: 10px;
-  padding-top: 15px;
-}
-.icon-return {
-  position: absolute;
-  left: 900px;
-  bottom: 650px;
-  width: 65px;
-  height: 65px;
-  margin-left: 10px;
+.title-page {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 350px;
 }
 
-.show-ready {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: baseline;
-  padding: 5px;
-  margin: 0 auto;
+.show-ready{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	padding: 5px;
+	margin: 0 auto;
 }
 
 .card-order {
-  display: flex;
-  flex-direction: column;
-  border: 3px solid #f8cb00;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  position: relative;
-  z-index: 0;
-  width: 38vw;
-  margin: 1em;
+	display: flex;
+    flex-direction: column;
+    border: 3px solid #f8cb00;
+    background-color: #fff;
+    border-radius: 0.5rem;
+	position: relative;
+	z-index: 0;
+	width: 38vw;
+	margin: 3em;;
 }
 
-.header-cards {
-  background-color: #f8cb00;
-  padding: 20px;
-  font-size: 20px;
-  text-align: center;
+.header-card {
+    background-color: #f8cb00;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
 }
 
-.main-list {
-  padding-top: 10px;
-  padding-bottom: 30px;
-  text-align: center;
-  font-size: 20px;
-}
+.main-list{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 18px;
+}    
+
 
 .infos {
   padding-bottom: 20x;
 }
 
-.btn-reader-order {
-  width: 200px;
-  height: 40px;
-  background: #f8cb00;
-  border-radius: 50px;
-  text-align: center;
-  padding-top: 1px;
-  margin-bottom: 10px;
-  margin-left: 80px;
-  font-weight: bold;
-  font-size: 20px;
+.btn-order-delivered {
+    width: 190px;
+    height: 50px;
+    background: #f8cb00;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 1px;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .icon-return {
@@ -81,6 +72,3 @@
   padding-top: 15px;
 }
 
-.container-icon-return {
-  background-color: #000;
-}

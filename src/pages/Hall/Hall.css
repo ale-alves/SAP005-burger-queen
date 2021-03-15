@@ -1,5 +1,5 @@
 .hall-page {
-    height: 2400px;
+    min-height: 150%;
     width: 100%;
     background-color: #000;
     font-family: 'Roboto', sans-serif;
