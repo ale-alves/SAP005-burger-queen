@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import Logotipo from "../../components/Logotipo/Logotipo";
+import { MdDelete } from "react-icons/md";
 
 const Menu = () => {
   const tokenUser = localStorage.getItem("token");
+  const [table, setTable] = useState("");
+  const user = localStorage.getItem("name");
   const [breakfast, setBreakfast] = useState([]);
   const [allDay, setAllDay] = useState([]);
   const [showMenus, setShowMenus] = useState(true);
@@ -72,6 +75,8 @@ const Menu = () => {
           <div className="logotipo">
             <Logotipo />
           </div>
+          <div className="tables">
+          </div>
           <div className="btn-show-menus">
             <button
               className="btn-breakfast"
@@ -84,26 +89,68 @@ const Menu = () => {
               Almoço/ Jantar
             </button>
           </div>
+
+          <select className="select-table"
+            name="tables" id="tables"
+            value={table}
+            onChange={(e) => setTable(Number(e.target.value))} >
+            <option value="">Selecione a mesa</option>
+            <option value="1">Mesa 01</option>
+            <option value="2">Mesa 02</option>
+            <option value="3">Mesa 03</option>
+            <option value="4">Mesa 04</option>
+            <option value="5">Mesa 05</option>
+            <option value="6">Mesa 06</option>
+            <option value="7">Mesa 07</option>
+            <option value="8">Mesa 08</option>
+            <option value="9">Mesa 09</option>
+            <option value="10">Mesa 10</option>
+          </select>
+
           <section id="summary">
             <p className="title-summary">Resumo do Pedido:</p>
-            {orderSummary.map((order) => (
-              <p>
-                {order.name} {order.complement} {order.flavor}{" "}
+            <p>Atendente: {user}</p>
+            <input className="client-order"
+              type="text"
+              placeholder="Digite o nome do Cliente"
+              onChange={(e) => {
+                setSendOrder({ ...sendOrder, "client": e.target.value })
+              }}
+            />
+            {orderSummary.map((order, index) => (
+              <>
+                <p>
+                  {order.name} {order.complement} {order.flavor}{" "}
+                  {Intl.NumberFormat("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  }).format(order.price)}
+                </p>
+
+                <MdDelete size={25}
+                  onClick={() => {
+                    orderSummary.splice(index, 1);
+                    setOrderSummary([...orderSummary]);
+                  }} />
+              </>
+            ))}
+
+            <input className="btn-clean-order"
+              type="button"
+              value="Limpar Pedido"
+              onClick={() => {
+                setOrderSummary([]);
+              }}
+            />
+            <p className="title-total">
+              <strong>TOTAL:{" "}
                 {Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
-                }).format(order.price)}
-              </p>
-            ))}
-            <p className="title-total">
-              <strong>TOTAL:{" "}
-              {Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              }).format(
-                orderSummary.reduce((total, item) => total + item.price, 0)
-              )}{" "}
-            </strong></p>
+                }).format(
+                  orderSummary.reduce((total, item) => total + item.price, 0)
+                )}{" "}
+              </strong></p>
             <button id="btn-sendKitchen"
               onClick={() => {
                 const products = orderSummary.map((order) => {
@@ -199,7 +246,7 @@ const Menu = () => {
 
                     <section >
                       <p className="title-complement"><strong>Adicional R$ 1,00</strong></p>
-                      <input 
+                      <input
                         type="radio"
                         id="ovo"
                         name={item.id}
@@ -247,16 +294,16 @@ const Menu = () => {
                           style: "currency",
                           currency: "BRL",
                         }).format(item.price)}
-                         <button
-                        className="item-btn"
-                        onClick={() =>
-                          setOrderSummary([...orderSummary, allDay[index]])
-                        }
-                      >
-                        Adicionar
+                        <button
+                          className="item-btn"
+                          onClick={() =>
+                            setOrderSummary([...orderSummary, allDay[index]])
+                          }
+                        >
+                          Adicionar
                       </button>
                       </p>
-                     
+
                     </>
                   ) : null}
                 </section>
@@ -272,17 +319,17 @@ const Menu = () => {
                         {Intl.NumberFormat("pt-BR", {
                           style: "currency",
                           currency: "BRL",
-                        }).format(item.price)} 
+                        }).format(item.price)}
                         <button
-                        className="item-btn"
-                        onClick={() =>
-                          setOrderSummary([...orderSummary, allDay[index]])
-                        }
-                      >
-                        Adicionar
+                          className="item-btn"
+                          onClick={() =>
+                            setOrderSummary([...orderSummary, allDay[index]])
+                          }
+                        >
+                          Adicionar
                       </button>
                       </p>
-                     
+
                     </>
                   ) : null}
                 </section>
